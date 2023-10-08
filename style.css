@@ -1,0 +1,378 @@
+:root {
+	--nav-height: 4rem;
+	--letter-spacing: 0.1rem;
+	--grey: rgb(65, 65, 68);
+	--black: rgb(13, 15, 14);
+	--white: rgb(239, 250, 246);
+	--buttons: rgb(73, 167, 218);
+	--eminence: rgb(127, 20, 139);
+	--background: rgb(39, 38, 39);
+	--blue-green: rgb(1, 150, 204);
+	--title-blue: rgb(54, 147, 229);
+	--links-hover: rgb(12, 47, 173);
+	--mid-white: rgb(156, 159, 165);
+	--light-white: rgb(209, 213, 221);
+	--links-visited: rgb(116, 32, 219);
+	--links-unvisited: rgb(59, 45, 255);
+	--bakermiller-pink: rgb(254, 138, 180);
+	--links-visited-hover: rgb(128, 18, 175);
+	--transparent-black: rgba(18, 18, 19, 0.574);
+	--transparent-grey: rgba(214, 214, 227, 0.748);
+}
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 300, 400, 500, 800;
+	src: url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 1.75;
+	position: relative;
+	overflow-x: hidden;
+	color: var(--white);
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: 'Rubik', sans-serif;
+	background-color: var(--background);
+	letter-spacing: var(--letter-spacing);
+}
+header, main, section, footer, ul, ol, dl, li, form, input {
+	margin: 0;
+	padding: 0;
+	padding-block: 0;
+	padding-inline: 0;
+}
+a {
+	text-decoration: none;
+	transition-duration: 0.35s;
+	color: var(--links-unvisited);
+	transition-timing-function: ease;
+}
+a:hover {
+	cursor: pointer;
+	color: var(--links-hover);
+}
+a:visited { color: var(--links-visited); }
+a:visited:hover { color: var(--links-visited-hover); }
+/* Header */
+header {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	position: sticky;
+}
+.nav-bar {
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	flex-direction: row;
+	height: var(--nav-height);
+	transition-duration: 0.25s;
+	background-color: transparent;
+	justify-content: space-between;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+}
+.brand-wrapper { padding-left: 2%; }
+.brand-name { font-size: 1.5rem; }
+.brand-first-word { font-weight: 800; }
+.brand-last-word { font-weight: 300; }
+.nav-list {
+	width: 40%;
+	display: flex;
+	padding: 0 1rem;
+	list-style: none;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-evenly;
+}
+.nav-item {
+	width: 100%;
+	display: inline;
+	text-align: center;
+}
+.nav-item:last-child { flex-shrink: 1.15; }
+.brand-name { transition-duration: 0.35s; }
+.nav-content, .main-icons { transition-duration: 0.25s; }
+a, .brand-name, .nav-content, .main-icons {
+	cursor: pointer;
+	transition-timing-function: ease;
+	letter-spacing: var(--letter-spacing);
+	transition-property: letter-spacing, color;
+}
+a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
+.main-icons {
+	vertical-align: middle;
+	font-size: 1rem !important;
+}
+.nav-bar a {
+	color: var(--white);
+	text-decoration: none;
+}
+.nav-bar a:hover { color: var(--white); }
+.scrolled-nav { background-color: var(--transparent-black); }
+/* Main Banner Section */
+.mini-title {
+	font-size: 0.75rem;
+	color: var(--bakermiller-pink);
+	text-transform: uppercase;
+}
+.main-title {
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 0.5rem 0;
+	color: var(--white);
+}
+.button {
+	cursor: pointer;
+	font-weight: 800;
+	border-radius: 0;
+	padding: 0.75rem 3rem;
+	letter-spacing: 0.15rem;
+	transition-duration: 0.25s;
+	transition-property: border-radius;
+	transition-timing-function: ease-in-out;
+}
+.button:hover { border-radius: 0.2rem 2.5rem; }
+.main-banner {
+	min-height: 100vh;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--black);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
+}
+.main-text {
+	top: 50%;
+	left: 40%;
+	width: 80%;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: space-between;
+	transform: translate(-40%, -50%);
+}
+.left-section, .right-section {
+	width: 45%;
+	height: 100%;
+}
+.main-form {
+	margin: 0;
+	border: none;
+	text-align: center;
+	border-radius: 0.25rem;
+	width: calc(100% - 6rem);
+	padding: 1rem 3rem 2rem;
+	height: calc(100% - 1.5rem);
+	background-color: var(--white);
+}
+.main-paragraph { text-align: justify; }
+.dark-title, .form-description { color: var(--black); }
+.main-input-form {
+	padding: 1rem;
+	outline: none;
+	margin: 1rem 0;
+	display: block;
+	border-radius: 0.25rem;
+	width: calc(100% - 2rem);
+	border: 1px solid var(--grey);
+	background-color: transparent;
+	letter-spacing: var(--letter-spacing);
+}
+.outline-button {
+	color: var(--buttons);
+	background-color: transparent;
+	border: 3px solid var(--buttons);
+}
+.fill-button {
+	color: var(--white);
+	background-color: var(--buttons);
+	border: 3px solid var(--buttons);
+}
+.main-button {
+	width: 100%;
+	border-radius: 0.25rem;
+}
+.credits {
+	right: 0.75rem;
+	bottom: 0.25rem;
+	position: absolute;
+	font-size: 0.75rem;
+}
+.credits a { font-weight: 600; }
+/* Footer */
+footer {
+	width: 100%;
+	position: relative;
+}
+.footer-wrapper {
+	font-size: 0.75rem;
+	text-align: center;
+	background-color: var(--black);
+	padding: 0 min(12.5rem, 15%) 0.5rem;
+}
+.footer-content { padding: 1.25rem 0 0.5rem; }
+.footer-list { text-align: justify; }
+.footer-faq-list {
+	padding-left: 0.5rem;
+	list-style-type: "-";
+}
+.footer-faq-list li { padding-left: 0.5rem; }
+dt { font-size: 1rem; }
+/* Internships Section */
+.internships-section {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding: 1.25rem 0 1rem;
+	background-color: var(--grey);
+}
+.internship-cards-container, .steps-container {
+	width: 100%;
+	display: flex;
+	padding: 1rem 0;
+	align-items: stretch;
+	justify-content: center;
+}
+.internship-cards-section {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+}
+.internship-card {
+	width: 22.5%;
+	margin: 1rem 0;
+}
+.internship-text {
+	margin: 1rem 0;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+.internship-description {
+	color: var(--white);
+	text-align: justify;
+}
+.internship-icon {
+	width: 4rem;
+	height: 4rem;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--black);
+}
+.internship-icons {
+	color: var(--white);
+	font-size: 3rem !important;
+	line-height: 4rem !important;
+}
+.section { padding-top: 1rem; }
+.apply-button { margin-top: 1.5rem; }
+/* Steps Section */
+.steps-section {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding: 1.25rem 0 1rem;
+	background-color: var(--background);
+}
+.steps-box {
+	width: 75%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.steps-table {
+	margin: 0;
+	width: 80%;
+	padding: 0;
+	border: none;
+	border-spacing: 1rem 0;
+}
+.step-circle {
+	width: 3rem;
+	height: 3rem;
+	border: none;
+	font-weight: 600;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 50%;
+	color: var(--black);
+	background-color: var(--white);
+}
+.step-description { text-align: justify; }
+.step-number {
+	font-size: 1.1rem;
+	line-height: 3rem;
+}
+.step-number-odd { text-align: left; }
+.step-number-even { text-align: right; }
+.step-circle-line {
+	width: 100%;
+	height: 100%;
+}
+.step-circle-cell {
+	text-align: center;
+	vertical-align: top;
+}
+/* Parallax Image */
+.parallax-image {
+	height: 50vh;
+	position: relative;
+	background-color: var(--grey);
+}
+.parallax {
+	min-height: 50vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.275)), url(images/luca-bravo-XJXWbfSo2f0-unsplash.jpg);
+}
+/* Light Mode */
+body.light-mode {
+	color: var(--black);
+	background-color: var(--white);
+}
+.light-mode .scrolled-nav { background-color: var(--transparent-grey); }
+.light-mode .main-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(images/artem-sapegin-DErxVSSQNdM-unsplash.jpg);
+}
+.light-mode .nav-bar a { color: var(--black); }
+.light-mode .nav-bar a:hover { color: var(--black); }
+.light-mode .mini-title { color: var(--eminence); }
+.light-mode .main-title { color: var(--black); }
+.light-mode .main-form { background-color: var(--grey); }
+.light-mode .dark-title, .light-mode .form-description { color: var(--white); }
+.light-mode .main-input-form {
+	color: var(--white);
+	border: 1px solid var(--white);
+}
+.light-mode .main-input-form::placeholder { color: var(--transparent-grey); }
+.light-mode .footer-wrapper { background-color: var(--white); }
+.light-mode .internships-section { background-color: var(--mid-white); }
+.light-mode .internship-description { color: var(--black); }
+.light-mode .fill-button { background-color: var(--eminence); }
+.light-mode .outline-button { color: var(--eminence); }
+.light-mode .button { border: 3px solid var(--eminence); }
+.light-mode .steps-section { background-color: var(--light-white); }
+.light-mode .step-circle {
+	color: var(--white);
+	background-color: black;
+}
+.light-mode .parallax {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.275)), url(images/markus-spiske-fpTVkXjxL_Y-unsplash.jpg);
+}
