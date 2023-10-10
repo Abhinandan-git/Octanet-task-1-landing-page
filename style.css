@@ -10,8 +10,8 @@
 	--blue-green: rgb(1, 150, 204);
 	--title-blue: rgb(54, 147, 229);
 	--links-hover: rgb(12, 47, 173);
-	--mid-white: rgb(156, 159, 165);
-	--light-white: rgb(209, 213, 221);
+	--mid-white: rgb(223, 223, 223);
+	--light-white: rgb(237, 237, 237);
 	--links-visited: rgb(116, 32, 219);
 	--links-unvisited: rgb(59, 45, 255);
 	--bakermiller-pink: rgb(254, 138, 180);
@@ -349,19 +349,12 @@ body.light-mode {
 }
 .light-mode .scrolled-nav { background-color: var(--transparent-grey); }
 .light-mode .main-banner {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(images/artem-sapegin-DErxVSSQNdM-unsplash.jpg);
+	background-image: url(images/artem-sapegin-DErxVSSQNdM-unsplash.jpg);
 }
 .light-mode .nav-bar a { color: var(--black); }
 .light-mode .nav-bar a:hover { color: var(--black); }
 .light-mode .mini-title { color: var(--eminence); }
 .light-mode .main-title { color: var(--black); }
-.light-mode .main-form { background-color: var(--grey); }
-.light-mode .dark-title, .light-mode .form-description { color: var(--white); }
-.light-mode .main-input-form {
-	color: var(--white);
-	border: 1px solid var(--white);
-}
-.light-mode .main-input-form::placeholder { color: var(--transparent-grey); }
 .light-mode .footer-wrapper { background-color: var(--white); }
 .light-mode .internships-section { background-color: var(--mid-white); }
 .light-mode .internship-description { color: var(--black); }
@@ -374,5 +367,5 @@ body.light-mode {
 	background-color: black;
 }
 .light-mode .parallax {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.275)), url(images/markus-spiske-fpTVkXjxL_Y-unsplash.jpg);
+	background-image: url(images/markus-spiske-fpTVkXjxL_Y-unsplash.jpg);
 }
