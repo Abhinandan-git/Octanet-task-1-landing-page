@@ -11,8 +11,10 @@ Viola! You can preview the landing page.
 
 ## Final Output
 
+### Dark Mode
 ![Output Dark Mode](assets/Dark-Mode.png)
 ![Output Dark Mode](assets/Dark-Mode-2.png)
 
+### Light Mode
 ![Output Light Mode](assets/Light-Mode.png)
 ![Output Light Mode](assets/Light-Mode-2.png)
